@@ -1,6 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Code, Database, Shield, Globe, Mail, Linkedin, Sun, Moon, Play, Pause, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import { SiteMetaInformation } from '../config/site.meta';
 
 const Homepage = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -8,7 +10,7 @@ const Homepage = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   
-  const headlines = [
+  const headlines = SiteMetaInformation.headlines || [
     'Innovative IT Solutions',
     'Digital Transformation',
     'Technology Excellence',
@@ -104,13 +106,23 @@ const Homepage = () => {
       <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-opacity-80 border-b border-gray-700/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className={`text-2xl font-bold ${accentColor}`}>
-              TechConsult Pro
+            <div className="flex items-center justify-start gap-4">
+              <Image
+                className='hidden md:block'
+                style={{ maxHeight: '80px' }}
+                src="/assets/wm-logo-ulir-rect.svg"
+                alt="Wowmatters Logo"
+                width={120}
+                height={80}
+              />
+              <div className={`text-2xl font-bold ${accentColor}`}>
+                Wowmatters
+              </div>
             </div>
             <div className="flex items-center space-x-8">
               <a href="#home" className="hover:text-violet-400 transition-colors">Home</a>
               <a href="#services" className="hover:text-violet-400 transition-colors">Services</a>
-              <a href="#portfolio" className="hover:text-violet-400 transition-colors">Portfolio</a>
+              <a href="#case-studies" className="hover:text-violet-400 transition-colors">Case Studies</a>
               <a href="#contact" className="hover:text-violet-400 transition-colors">Contact</a>
               <button
                 onClick={toggleTheme}
@@ -124,7 +136,7 @@ const Homepage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-4">
+      <section id="home" className="pt-40 pb-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <h1 className={`text-6xl font-bold mb-4 ${accentColor}`}>
@@ -198,11 +210,11 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 px-4">
+      {/* case-studies Section */}
+      <section id="case-studies" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className={`text-4xl font-bold text-center mb-16 ${accentColor}`}>
-            Recent Projects
+            Case Studies
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
