@@ -1,3 +1,5 @@
+import { Code, Database, GlobeLock, Handshake } from "lucide-react";
+
 export const SiteMetaInformation = {
     title: 'Wowmatters',
     description: 'Wowmatters is a leading provider of innovative technology solutions, specializing in custom software development, managed services, and digital transformation. We empower businesses with cutting-edge technologies to drive growth and efficiency.',
@@ -29,18 +31,19 @@ export const SiteMetaInformation = {
         {
             title: 'Custom Software Development',
             description: 'Tailored software solutions to meet unique business needs.',
-            icon: 'custom-software-development-icon.svg'
+            icon: <Code className="w-8 h-8" />
         }, {
             title: 'Technology Enablement',
-            description: 'Embrace the latest in cloud, AI, automation, and more',
-            icon: 'mobile-app-development-icon.svg'
+            description: 'Optimizing business processes with the latest technologies. Cloud, AI, automation, and more',
+            icon: <GlobeLock className="w-8 h-8" />
         }, {
             title: 'Database Management & Analytics',
-            description: 'Build Insight-driven decisions, clean data, data monetization for business growth',
-            icon: 'web-development-icon.svg'
+            description: 'Build Insight-driven decisions and smart data integration for business growth',
+            icon: <Database className="w-8 h-8" />
         }, {
             title: 'Managed Services',
-            description: 'Comprehensive IT support and management services to ensure smooth operations with proactive monitoring and support',
+            description: 'Comprehensive support to ensure smooth operations with proactive monitoring',
+            icon: <Handshake className="w-8 h-8" />
         }
     ],
     caseStudies: [

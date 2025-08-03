@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Code, Database, Shield, Globe, Mail, Linkedin, Sun, Moon, Play, Pause, ExternalLink } from 'lucide-react';
+import { Code, Database, Mail, Linkedin, Sun, Moon, Play, Pause, ExternalLink, GlobeLock, Handshake } from 'lucide-react';
 import Image from 'next/image';
 import { SiteMetaInformation } from '../config/site.meta';
 
@@ -41,28 +41,25 @@ const Homepage = () => {
     setDarkMode(!darkMode);
   };
 
-  const services = [
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "Technology Enablement",
-      description: "Embrace the latest in cloud, AI, automation, and more"
-    },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: "Database Management & Analytics",
-      description: "Insight-driven decisions, clean data, data monetization"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Managed Services",
-      description: "Reliable and scalable infrastructure with proactive monitoring and support"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Cloud Solutions",
-      description: "Migration to cloud platforms and infrastructure optimization"
-    }
-  ];
+  const services = SiteMetaInformation.services ?? [
+        {
+            title: 'Custom Software Development',
+            description: 'Tailored software solutions to meet unique business needs.',
+            icon: <Code className="w-8 h-8" />
+        }, {
+            title: 'Technology Enablement',
+            description: 'Embrace the latest in cloud, AI, automation, and more',
+            icon: <GlobeLock className="w-8 h-8" />
+        }, {
+            title: 'Database Management & Analytics',
+            description: 'Build Insight-driven decisions, clean data, data monetization for business growth',
+            icon: <Database className="w-8 h-8" />
+        }, {
+            title: 'Managed Services',
+            description: 'Comprehensive IT support and management services to ensure smooth operations with proactive monitoring and support',
+            icon: <Handshake className="w-8 h-8" />
+        }
+    ];
 
   const projects = [
     {
