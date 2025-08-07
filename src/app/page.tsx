@@ -107,7 +107,7 @@ const Homepage = () => {
               <Image
                 className='hidden md:block'
                 style={{ maxHeight: '80px' }}
-                src="/assets/wm-logo-ulir-rect.svg"
+                src="./assets/wm-logo-ulir-rect.svg"
                 alt="Wowmatters Logo"
                 width={120}
                 height={80}
