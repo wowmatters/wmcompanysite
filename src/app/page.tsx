@@ -141,8 +141,7 @@ const Homepage = () => {
               <span className="animate-pulse">|</span>
             </h1>
             <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-              Transforming businesses through cutting-edge technology solutions. 
-              We deliver innovative IT consulting services that drive growth and efficiency.
+              Empowering Your Future with Expertise. Transforming businesses through managed services and innovative solutions.
             </p>
           </div>
 
