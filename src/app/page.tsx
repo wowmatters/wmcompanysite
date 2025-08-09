@@ -248,14 +248,14 @@ const Homepage = () => {
           
           <div className="flex justify-center space-x-8 mb-12">
             <a
-              href="mailto:contact@techconsultpro.com"
+              href="mailto:contact@wowmatters.id"
               className={`flex items-center space-x-3 px-8 py-4 ${buttonClasses} text-white rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg`}
             >
               <Mail className="w-5 h-5" />
               <span>Email Us</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/wowmatters"
               className={`flex items-center space-x-3 px-8 py-4 border-2 ${darkMode ? 'border-violet-400 text-violet-400 hover:bg-violet-400' : 'border-orange-600 text-orange-600 hover:bg-orange-600'} hover:text-white rounded-full transform transition-all duration-300 hover:scale-105`}
             >
               <Linkedin className="w-5 h-5" />
@@ -266,9 +266,9 @@ const Homepage = () => {
           <div className={`p-8 rounded-2xl border ${cardClasses} max-w-2xl mx-auto`}>
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-4 text-left">
-              <p><strong>Email:</strong> contact@techconsultpro.com</p>
-              <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-              <p><strong>Location:</strong> Tech Hub, Innovation District</p>
+              <p><strong>Email:</strong> contact@wowmatters.id</p>
+              <p><strong>Phone:</strong> +62 85222406115</p>
+              <p><strong>Location:</strong> Indonesia</p>
               <p><strong>Business Hours:</strong> Mon-Fri 9AM-6PM</p>
             </div>
           </div>
@@ -279,7 +279,7 @@ const Homepage = () => {
       <footer className="py-12 px-4 border-t border-gray-700/30">
         <div className="max-w-7xl mx-auto text-center">
           <div className={`text-2xl font-bold mb-4 ${accentColor}`}>
-            TechConsult Pro
+            Wowmatters Consulting
           </div>
           <p className="text-gray-400 mb-6">
             Empowering businesses through innovative technology solutions
@@ -290,7 +290,7 @@ const Homepage = () => {
             <Mail className="w-6 h-6 hover:text-violet-400 cursor-pointer transition-colors" />
           </div>
           <p className="text-sm text-gray-500 mt-8">
-            © 2025 TechConsult Pro. All rights reserved.
+            © {new Date().getFullYear()} Wowmatters. All rights reserved.
           </p>
         </div>
       </footer>
